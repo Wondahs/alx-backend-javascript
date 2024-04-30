@@ -1,5 +1,7 @@
 export default function cleanSet(set, startString) {
-  if (!set || !(set instanceof Set) || !startString || typeof startString !== 'string') {
+  const allStrings = Array.from(set).every((element) => typeof element === 'string');
+
+  if (!set || !(set instanceof Set) || !allStrings || !startString || typeof startString !== 'string') {
     return '';
   }
   const finalString = [];
