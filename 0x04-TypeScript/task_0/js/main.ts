@@ -5,14 +5,14 @@ interface Student {
 	location: string;
 }
 
-const student1: Student {
+const student1: Student = {
   firstName: 'Mike',
   lastName: 'James',
   age: 8,
   location: 'Lagos'
 };
 
-const student2: Student {
+const student2: Student = {
   firstName: 'John',
   lastName: 'Chris',
   age: 9,
@@ -33,7 +33,7 @@ headLocation.textContent = 'Location';
 
 const tableBody = newTable.createTBody()
 
-for (const student: Student of studentsList) {
+for (const student of studentsList) {
   const newRow = tableBody.insertRow();
   const newRowFirstName = newRow.insertCell();
   newRowFirstName.textContent = student.firstName;
