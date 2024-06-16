@@ -1,4 +1,6 @@
 // displayMessage that prints in STDOUT the string argument.
-export default function displayMessage(message) {
-  console.log(message);
+function displayMessage(message) {
+  process.stdout.write(message + '\n')
 }
+
+module.exports = displayMessage;
