@@ -58,7 +58,6 @@ app.get('/students', async (req, res) => {
   } else {
     students = "";
   }
-  console.log("Students:", students);
   result.push(students);
   res.send(result.join('\n'));
 });
