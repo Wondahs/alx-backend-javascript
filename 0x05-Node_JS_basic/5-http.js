@@ -40,7 +40,7 @@ function countStudents(path) {
 }
 
 // A simple http server
-const filepath = process.argv.length > 2 ? process.argv[2] : 'q';
+const filepath = process.argv.length > 2 ? process.argv[2] : '';
 const http = require('http');
 
 const port = 1245;
