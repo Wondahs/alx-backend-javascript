@@ -22,12 +22,17 @@ function parseData(data) {
     console.log(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}`);
     console.log(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`);
   } catch (error) {
-    throw new Error('Cannot load the database');
+    // throw new Error('Cannot load the database');
   }
 }
 
 function countStudents(path) {
   return new Promise((resolve, reject) => {
+    // fs.stat(path, (err, stats) => {
+    //   if (err.code === 'ENOENT' || !stats.isFile()) {
+    //     reject(new Error('Cannot load the datbase'));
+    //   }
+    // });
     fs.readFile(path, 'utf8', (err, data) => {
       if (err) {
         reject(new Error('Cannot load the database'));
