@@ -20,8 +20,8 @@ function parseData(data) {
     }
 
     result.push(`Number of students: ${content.length}`);
-    result.push(`Number of students in CS: ${cs.length}. ${cs.join(', ')}`);
-    result.push(`Number of students in SWE: ${swe.length}. ${swe.join(', ')}`);
+    result.push(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}`);
+    result.push(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`);
     return result.join('\n');
   } catch (error) {
     throw new Error('Cannot load the database');
