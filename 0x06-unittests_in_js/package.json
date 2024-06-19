@@ -1,0 +1,14 @@
+{
+  "name": "unit_testing",
+  "version": "1.0.0",
+  "description": "Working on testing tools like mocha, chai and sinon",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Wonders Victor",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}
