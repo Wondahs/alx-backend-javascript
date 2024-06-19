@@ -27,7 +27,7 @@ function parseData(data) {
 function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.stat(path, (err, stats) => {
-      if (err.code === 'ENOENT' || !stats.isFile()) {
+      if (!stats.isFile()) {
         reject(new Error('Cannot load the datbase'));
       }
     });
@@ -35,7 +35,11 @@ function countStudents(path) {
       if (err) {
         reject(new Error('Cannot load the database'));
       }
-      resolve(parseData(data));
+      try {
+        resolve(parseData(data));
+      } catch (err) {
+        reject(new Error('Cannot load the database'));
+      }
     });
   });
 }
