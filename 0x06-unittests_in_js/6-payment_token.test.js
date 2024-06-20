@@ -1,7 +1,6 @@
 // 6-payment_token.test.js
 const assert = require('assert');
 const getPaymentTokenFromAPI = require('./6-payment_token');
-const {get} = require('http');
 
 describe('getPaymentTokenFromAPI', () => {
   it('test the result of getPaymentTokenFromAPI(true)', async () => {
