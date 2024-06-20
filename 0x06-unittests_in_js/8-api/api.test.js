@@ -37,6 +37,7 @@ describe('app', () => {
       if (error) {
         done(error);
       } else {
+        console.log(response.statusCode)
         assert.strictEqual(response.statusCode, 404);
         done();
       }
