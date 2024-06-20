@@ -3,7 +3,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { expect } = require('chai');
 
-const calculateNumber = require('./1-calcul');
+const calculateNumber = require('./2-calcul_chai');
 
 describe('round and add calculator', () => {
   it('should round numbers and return their sum', () => {
