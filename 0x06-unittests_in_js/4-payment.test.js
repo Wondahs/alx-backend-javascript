@@ -1,9 +1,9 @@
-// 3-payment.test.js
+// 4-payment.test.js
 const sinon = require('sinon');
 const describe = require('mocha');
-const expect = require('chai');
+const assert = require('assert');
 const Utils = require('./utils');
-const sendPaymentRequestToApi = require('./3-payment');
+const sendPaymentRequestToApi = require('./4-payment');
 
 describe('sendPaymentRequestToApi', () => {
   it('should call Utils.calculateNumber', () => {
