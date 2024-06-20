@@ -45,7 +45,7 @@ describe('app', () => {
       url: 'http://localhost:7865/login',
       json: true,
       body: {
-        username: 'James',
+        userName: 'James',
       },
     };
     request.post(options, (error, _, body) => {
