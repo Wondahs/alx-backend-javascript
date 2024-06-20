@@ -38,7 +38,7 @@ describe('test sendPaymentRequestToApi', () => {
   it('should call Utils.calculateNumber and log 20', () => {
     // Set stub return
     stub.returns(20);
-  
+
     // Call function being tested
     sendPaymentRequestToApi(10, 10);
 
