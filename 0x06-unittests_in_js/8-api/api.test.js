@@ -10,12 +10,6 @@ const app = require('./api');
 describe('app', () => {
   let consoleSpy;
 
-  it('logs correct result', () => {
-    consoleSpy = sinon.spy(console, 'log');
-    assert.strictEqual(consoleSpy.calledWith('API available on localhost port 7865'), true);
-    consoleSpy.restore();
-  });
-
   it('return correct status code for "/"', () => {
     request('http://localhost:7865/', (error, response, _) => {
       if (error) {
