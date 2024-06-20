@@ -5,7 +5,7 @@ const request = require('request');
 const assert = require('assert');
 
 describe('app', () => {
-  it('return correct status code for "/"', () => new Promise((done) => {
+  it('return correct status code for "/"', (done) => {
     request('http://localhost:7865/', (error, response, _) => {
       if (error) {
         done(error);
@@ -14,9 +14,9 @@ describe('app', () => {
         done();
       }
     });
-  }));
+  });
 
-  it('return correct result', () => new Promise((done) => {
+  it('return correct result', (done) => {
     request('http://localhost:7865/', (error, _, body) => {
       if (error) {
         done(error);
@@ -25,9 +25,9 @@ describe('app', () => {
         done();
       }
     });
-  }));
+  });
 
-  it('return correct status code for unknown route', () => new Promise((done) => {
+  it('return correct status code for unknown route', (done) => {
     request('http://localhost:7865/unknown', (error, response, _) => {
       if (error) {
         done(error);
@@ -36,5 +36,5 @@ describe('app', () => {
         done();
       }
     });
-  }));
+  });
 });
